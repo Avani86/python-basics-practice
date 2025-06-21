@@ -13,3 +13,7 @@ A fun beginner Python project that gives random yes/no answers to any question.
 
 ## Why I Made This
 To practice Python fundamentals and build something interactive and fun!
+
+```## Example:
+Input: Will i paas the exam?
+Output; Without a doubt!
