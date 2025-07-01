@@ -1,0 +1,36 @@
+from functools import reduce
+
+def triple(y):
+    return y * 3
+
+y = triple(4)
+print(y)
+
+if y % 2 == 0:
+    print(y, "is even")
+else:
+    print(y, "is odd")
+
+x = 1
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+ran_ge = range(x, y)
+
+#filter function
+prime_num = list(filter(lambda n: is_prime(n), ran_ge))
+print("Prime nums are", prime_num)
+
+# map function
+mapped_primes = list(map(lambda p: p * 10, prime_num))
+print("Map of Prime no. is", mapped_primes)
+
+# reduce function
+sum_primes = reduce(lambda a, b: a + b, prime_num)
+print("Sum of primes:", sum_primes)
